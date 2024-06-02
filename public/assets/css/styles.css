@@ -1,0 +1,218 @@
+:root {
+    /*
+        --hue: Main color;
+        --shue: Secondary color;
+    */
+    --hue: 212;
+    --shue: 25;
+    --dark-background_color_12-16: hsl(var(--hue), 12%, 16%);
+    --dark-background_color_12-12: hsl(var(--hue), 12%, 12%);
+    --dark-background_color_12-8: hsl(var(--hue), 12%, 8%);
+    --dark-secondary_color: hsl(var(--shue), 80%, 80%);
+    --dark-button_color: hsl(var(--hue), 72%, 60%);
+    --dark-button_color-hover: hsl(var(--hue), 72%, 52%);
+    --dark-button_color-alternative: hsl(var(--hue), 12%, 60%);
+    --dark-button_color-alternative_darker: hsl(var(--hue), 12%, 52%);
+    --dark-button_color-grey: hsl(var(--hue), 12%, 88%);
+
+}
+
+/* #f5f5f5 = ..., ..., 96 */
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    background-color: var(--dark-background_color_12-16);
+    color: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+.card {
+    display: flex;
+    max-width: 320px;
+    background-color: var(--dark-background_color_12-12);
+    border-radius: 12px;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card button {
+    border: 0;
+    font-size: .875rem;
+    transition: background-color 180ms ease, outline-color 180ms ease;
+    cursor: pointer;
+}
+
+.card button:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-offset: 2px;
+}
+
+.card button svg {
+    min-width: 16px;
+    font-size: 1rem;
+}
+
+.card .info {
+    display: inherit;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card .info img {
+    width: 100%;
+}
+
+.card .info .container {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.card h1,
+.card h2,
+.card p,
+.card h3 {
+    margin: 0;
+}
+
+.card h1 {
+    color: #fff;
+    line-height: 1;
+}
+
+.card h2 {
+    line-height: 1.5;
+}
+
+.card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark-secondary_color);
+}
+
+.card h3, 
+.card p {
+    line-height: 1.5;
+}
+
+.card p {
+    color: #dcdcdc;
+    font-size: .75rem;
+}
+
+.card .info a {
+    font-size: .75rem;
+	text-decoration: none;
+    line-height: 1.5;
+    
+    background-image: linear-gradient(to bottom, transparent 90%, var(--dark-secondary_color) 0);
+	background-size: 0% 100%;
+	background-repeat: no-repeat;
+    box-shadow: none;
+
+	transition: background-size .5s ease, outline-color .5s ease;
+}
+
+.card .info a:hover {
+    background-size: 100% 100%;
+	cursor: pointer;
+}
+
+.card .info a:focus {
+	background-image: linear-gradient(to bottom, transparent 0%, var(--dark-secondary_color) 0);
+    background-size: 100% 100%;
+    outline: 2px solid var(--dark-secondary_color);
+    outline-offset: 2px;
+    border-radius: .25rem;
+}
+
+.card .info a:visited {
+    color: #fff;
+}
+
+.card .info .list {
+    display: inherit;
+    margin-top: .5rem;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+}
+
+.card .info .list button {
+    display: inline-flex;
+    justify-content: center;
+    gap: .5rem;
+
+    width: 100%;
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    
+    font-size: .875rem;
+}
+
+.card .info .list button:hover {
+    background-color: var(--dark-button_color-grey);
+}
+.card .info .list button:focus {
+    background-color: var(--dark-button_color-grey);
+    outline-color: var(--dark-button_color-grey);
+}
+
+.card .info .list button.email {
+    box-shadow: inset 0 0 0 1px var(--dark-button_color-grey);
+}
+
+.card .info .list button.linkedin {
+    background-color: var(--dark-button_color);
+}
+.card .info .list button.linkedin:hover {
+    background-color: var(--dark-button_color-hover);
+}
+.card .info .list button.linkedin:focus {
+    background-color: var(--dark-button_color-hover);
+    outline-color: var(--dark-button_color-hover);
+}
+
+.card .about, .card .interests {
+    display: inherit;
+    flex-direction: column;
+}
+
+.card footer {
+    display: inline-flex;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+    background-color: var(--dark-background_color_12-8);
+}
+
+.card footer button {
+    display: inherit;
+
+    padding: .25rem;
+    border-radius: .25rem;
+    
+    background-color: var(--dark-button_color-alternative);
+    color: var(--dark-background_color_12-8);
+}
+
+.card footer button:hover {
+    background-color: var(--dark-button_color-alternative_darker);
+}
+
+.card footer button:focus {
+    outline-color: var(--dark-button_color-alternative);
+}
+
+.card footer button:focus:hover {
+    outline-color: var(--dark-button_color-alternative_darker);
+}
