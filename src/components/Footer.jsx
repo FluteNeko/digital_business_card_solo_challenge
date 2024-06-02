@@ -1,13 +1,23 @@
-import { faTwitter, faFacebookF, faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faDiscord } from "@fortawesome/free-brands-svg-icons";
+import openDiscordApp from "../utils/openDiscord";
+
+
 
 export default function Footer() {
     return (
-        <footer>
-            <button><FontAwesomeIcon icon={faTwitter} /></button>
-            <button><FontAwesomeIcon icon={faFacebookF} /></button>
-            <button><FontAwesomeIcon icon={faInstagram} /></button>
-            <button><FontAwesomeIcon icon={faGithub} /></button>
+        <footer className="container">
+            <a tabIndex={-1}>
+                <button onClick={openDiscordApp}><FontAwesomeIcon icon={faDiscord} /></button>
+            </a>
+
+            <a
+                href='https://github.com/FluteNeko'
+                target="_blank"
+                tabIndex={-1}
+            >
+                <button><FontAwesomeIcon icon={faGithub} /></button>
+            </a>
         </footer>
     );
 }

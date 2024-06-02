@@ -9,9 +9,11 @@ export default function App() {
     return (
         <div className='card'>
             <Info />
-            <About />
-            <Interests /> 
-            <Footer />      
+            <div className='container'>
+                <About />
+                <Interests />
+            </div>
+            <Footer />
         </div>
     );
 }

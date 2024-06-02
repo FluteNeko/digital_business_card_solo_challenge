@@ -3,6 +3,8 @@
 This is my attempt at solving the [Digital Business Card solo project](https://v2.scrimba.com/learn-react-c0e/~010) from [Scrimba](https://v2.scrimba.com/home).
 
 ## Setup
+Create your `.env` file and follow the instructions under `.env_example`
+
 ```
 $ npm install
 $ npm run dev
